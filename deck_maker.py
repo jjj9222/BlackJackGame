@@ -9,11 +9,17 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.uix.widget import Widget
 
+#initalizes the large deck of cards
 Total_Cards = []
+#cards is a copy of total cards this is used for the blackjack game 
 cards = []
+#hand is the cards in you hand 
 hand = []
+#the dealerhand are the cards in dealers hand
 dealerhand = []
+#initalizes the amount of tokens user has
 tokens = 1000
+#initalizes the count of the blackjack game. To predict outcome of next game
 gamecount = 0
 
 class Cards:
@@ -122,7 +128,7 @@ def main():
         if (len(cards) <= 10):
             print("Shuffling")
             time.sleep(1)
-            cards = Make_Deck(numberdecks)
+            cards = Total_Cards
         print("")
         print("New Game")
         bet = 0
